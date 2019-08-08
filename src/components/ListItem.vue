@@ -8,9 +8,9 @@ export default {
   name: 'list-item',
   props: ['country'],
   methods: {
-    handleClick(){
-      //console.log("country: ", this.country);
-      eventBus.$emit('country-selected', this.country);
+    handleClick() {
+      //console.log('county', this.country);
+      eventBus.$emit('country-selected', this.country)
     }
   }
 }

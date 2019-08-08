@@ -1,4 +1,5 @@
 <template>
+
   <div>
     <h1>Countries</h1>
     <div class="main-container">
@@ -6,6 +7,7 @@
       <country-detail :country='selectedCountry'></country-detail>
     </div>
   </div>
+
 </template>
 
 <script>
@@ -16,7 +18,7 @@ import CountryDetail from './components/CountryDetail.vue';
 export default {
   name: 'app',
   data(){
-    return {
+    return{
       countries: [],
       selectedCountry: null
     };
@@ -27,7 +29,7 @@ export default {
     .then(countries => this.countries = countries)
 
     eventBus.$on('country-selected', (country) => {
-      //console.log('within the $on method', country);
+      //console.log('within $on', country);
       this.selectedCountry = country;
     })
   },
@@ -39,7 +41,7 @@ export default {
 </script>
 
 <style>
-  .main-container {
+.main-container {
     display: flex;
     justify-content: space-between;
   }

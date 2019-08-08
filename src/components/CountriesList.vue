@@ -11,7 +11,7 @@
 import ListItem from './ListItem.vue';
 
 export default {
-  name: 'countries-list',
+  name: 'countried-list',
   props: ['countries'],
   components: {
     "list-item": ListItem
